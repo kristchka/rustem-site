@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Рустем Садыков</title>
-<meta property="og:title" content="Рустем Садыков, рилс-продюсер">
+<meta property="og:title" content="Рустем Садыков, UGC-креатор и рилс-продюсер">
 <meta property="og:description" content="Кейсы, подход и контакты">
 <meta property="og:image" content="img/point.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Рустем Садыков, рилс-продюсер и креативный контент-маркетолог: кейсы, подход, контакты">
+<meta name="description" content="Рустем Садыков, UGC-креатор, рилс-продюсер и совладелец агентства: кейсы, подход, контакты">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;700&display=swap">
 <style>
@@ -79,12 +79,12 @@ section[id]{scroll-margin-top:72px}
 .path .wrap{padding-block:96px;display:flex;flex-wrap:wrap;gap:48px}
 .path h2{margin:16px 0 0;font-family:var(--display);font-weight:700;font-size:clamp(48px,6vw,96px);line-height:.9;text-transform:uppercase}
 .path-left{flex:1 1 360px;min-width:0}
-.path-grid{flex:1 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:var(--rule)}
-.path-grid > div{padding:28px}
-.path-grid .now{background:var(--hot);grid-column:1/-1;border-top:var(--rule)}
-.path-grid .mid{border-left:var(--rule)}
-.path-grid p{margin:12px 0 0}
-.path-grid .now p{font-size:22px;line-height:1.35;font-weight:700}
+.path-grid{flex:1 1 560px;min-width:0;margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--ink);border:var(--rule)}
+.path-grid > li{padding:26px;background:var(--paper);display:flex;flex-direction:column;gap:10px}
+.step-top{display:flex;justify-content:space-between;gap:12px;font-weight:700}
+.path-grid h3{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(24px,2.2vw,30px);line-height:1.05;text-transform:uppercase}
+.path-grid p{margin:0}
+.path-grid .now{background:var(--hot)}
 
 /* cases: separate cards, whole screenshots on a grey tray */
 .cases{border-top:var(--rule)}
@@ -146,7 +146,7 @@ section[id]{scroll-margin-top:72px}
 @media (max-width:720px){
   body{font-size:16px}
   .top .wrap{display:grid;grid-template-columns:1fr auto;gap:8px 12px;padding-block:10px}
-  .top nav{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,.8fr) minmax(0,1.35fr) minmax(0,1fr);gap:0;border:2px solid var(--ink);font-size:10px;letter-spacing:0;white-space:nowrap}
+  .top nav{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:2px solid var(--ink);font-size:10px;letter-spacing:0;white-space:nowrap}
   .top nav a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:40px;padding:0 2px;min-width:0}
   .top nav a + a{border-left:2px solid var(--ink)}
   .top nav a:active{background:var(--ink);color:var(--paper)}
@@ -185,7 +185,8 @@ section[id]{scroll-margin-top:72px}
   .links > *{padding:20px}
   .fit .wrap > div + div{border-left:none;border-top:var(--rule);padding-left:0}
   .links > * + *{border-left:none;border-top:3px solid var(--paper)}
-  .path-grid .mid{border-left:none;border-top:var(--rule)}
+  .path-grid{grid-template-columns:1fr}
+  .path-grid > li{padding:22px 20px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 html{scroll-behavior:smooth}
@@ -195,11 +196,11 @@ html{scroll-behavior:smooth}
 <body>
 <header class="top">
   <div class="wrap mono">
-    <span class="brand">R/S reels producer</span>
+    <span class="brand">R/S UGC и reels</span>
     <nav aria-label="Разделы">
       <a href="#about">Обо мне</a>
       <a href="#cases">Кейсы</a>
-      <a href="#life">Лайф-контент</a>
+      <a href="#life">UGC</a>
       <a href="#contact">Контакты</a>
     </nav>
     <a class="btn" href="https://t.me/rysalinio">Написать</a>
@@ -211,12 +212,12 @@ html{scroll-behavior:smooth}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="mono">рилс-продюсер и&#160;контент-маркетолог</div>
+      <div class="mono">UGC-креатор, рилс-продюсер и&#160;совладелец агентства</div>
       <h1>Рустем<br><span class="hot">Садыков</span></h1>
       <p class="lead">Не&#160;делаю «просто ролики», а&#160;через видео усиливаю образ, доверие и&#160;деньги</p>
       <ul class="mono">
-        <li>4-й год в&#160;видео</li>
-        <li>Бизнес, личные бренды, эксперты</li>
+        <li>4-й год в&#160;видео, почти год в&#160;UGC</li>
+        <li>Своё агентство и&#160;команда креаторов</li>
       </ul>
       <div class="cta">
         <a class="btn btn-hot" href="#cases">Смотреть кейсы</a>
@@ -246,11 +247,28 @@ html{scroll-behavior:smooth}
       <div class="mono label">01 обо мне</div>
       <h2>13&#160;лет с&#160;телом,<br><span class="hot">теперь с&#160;видео</span></h2>
     </div>
-    <div class="path-grid">
-      <div><div class="mono" style="font-weight:700">Тогда</div><p>Тренер, реабилитолог и&#160;массажист<br>Научился чувствовать людей, брать ответственность и&#160;доводить до&#160;результата</p></div>
-      <div class="mid"><div class="mono" style="font-weight:700">Переход</div><p>Понял, что&#160;видео стало моим языком<br>Изучил маркетинг, SMM, YouTube и&#160;короткие форматы<br>Шаг за&#160;шагом пришёл к&#160;продюсерскому подходу</p></div>
-      <div class="now"><div class="mono" style="font-weight:700">Сейчас</div><p>Видео- и&#160;рилс-продюсер<br>Соединяю креатив, стратегию и&#160;психологию восприятия</p></div>
-    </div>
+    <ol class="path-grid">
+      <li>
+        <div class="step-top mono"><span>01/04</span><span>13&#160;лет</span></div>
+        <h3>Фитнес и реабилитация</h3>
+        <p>Тренер, реабилитолог и&#160;массажист<br>Научился чувствовать людей, брать ответственность и&#160;доводить до&#160;результата</p>
+      </li>
+      <li>
+        <div class="step-top mono"><span>02/04</span><span>переход</span></div>
+        <h3>Рилс-продюсер</h3>
+        <p>Понял, что&#160;видео стало моим языком<br>Изучил маркетинг, SMM, YouTube и&#160;короткие форматы<br>Делал контент для&#160;бизнеса и&#160;экспертов: кейсы ниже</p>
+      </li>
+      <li>
+        <div class="step-top mono"><span>03/04</span><span>почти&#160;год</span></div>
+        <h3>UGC-креатор</h3>
+        <p>Снимаю лайф-контент, где продукт становится частью жизни<br>Нативные интеграции косметики VOIS</p>
+      </li>
+      <li class="now">
+        <div class="step-top mono"><span>04/04</span><span>сейчас</span></div>
+        <h3>Совладелец агентства</h3>
+        <p>Вместе с&#160;командой креаторов делаем контент для&#160;брендов<br>Соединяю креатив, стратегию и&#160;психологию восприятия</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -334,9 +352,9 @@ html{scroll-behavior:smooth}
 
 <section class="life" id="life">
   <div class="wrap">
-    <div class="mono label">03 лайф-контент, beauty-тесты и&#160;честные обзоры</div>
+    <div class="mono label">03 UGC: beauty-тесты и&#160;честные обзоры</div>
     <h2>Не&#160;продаю продукт,<br>а&#160;показываю жизнь</h2>
-    <p class="lead">Тест, опыт и&#160;честный вывод<br>Зритель узнаёт себя в&#160;истории, доверяет ей и&#160;сам решает попробовать продукт<br>За&#160;плечами 6&#160;месяцев нативных интеграций косметики VOIS</p>
+    <p class="lead">Тест, опыт и&#160;честный вывод<br>Зритель узнаёт себя в&#160;истории, доверяет ей и&#160;сам решает попробовать продукт<br>Почти год работаю UGC-креатором, в&#160;декабре будет ровно год<br>Нативные интеграции косметики VOIS</p>
     <div class="reels">
       <figure><img src="img/r-pvz.jpg" alt="Ролик «Когда отказали в возврате на ПВЗ», 203&#160;тыс. просмотров" loading="lazy"></figure>
       <figure><img src="img/r-spf.jpg" alt="Ролик про SPF-стик, 179&#160;тыс. просмотров" loading="lazy"></figure>
