@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Рустем Садыков</title>
+<meta property="og:title" content="Рустем Садыков, рилс-продюсер">
+<meta property="og:description" content="Кейсы, подход и контакты">
+<meta property="og:image" content="img/point.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Рустем Садыков, рилс-продюсер и креативный контент-маркетолог: кейсы, подход, контакты">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;700&display=swap">
+<style>
+/* Layout: brutalist poster grid — thick black rules split full-width bands; one hot accent. Deliberately single-theme (white paper, black ink). */
+:root{
+  --paper:#FFFFFF; --ink:#000000; --hot:#FF3B1F; --soft:#F2F2F2; --mute:#5C5C5C; --mute-dark:#BDBDBD;
+  --display:'Oswald','Arial Narrow',Impact,sans-serif;
+  --body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  --rule:3px solid var(--ink);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.hot{color:var(--hot)}
+h1,h2,h3{text-wrap:balance}
+
+/* header */
+.top{border-bottom:var(--rule);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+section[id]{scroll-margin-top:72px}
+.top .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;min-height:64px}
+.top nav{display:flex;flex-wrap:wrap;gap:20px}
+.brand{font-weight:700}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--hot)}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-weight:700;font-size:13px;text-transform:uppercase}
+.btn:hover{background:var(--hot);color:var(--ink)}
+
+/* hero: one screen — copy left, photos right */
+.first{display:flex;flex-direction:column;height:calc(100svh - 70px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:440px;max-height:980px}
+@media (max-height:660px) and (min-width:721px){.hero ul{display:none}.stat span{margin-top:2px}}
+.hero{border-bottom:var(--rule);flex:1 1 auto;min-height:0;display:flex}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);flex:1 1 auto;min-height:0;width:100%}
+.hero-copy{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(12px,2.2vh,28px);padding-block:clamp(16px,3vh,40px);padding-right:clamp(16px,3vw,48px);min-width:0}
+.hero h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(48px,min(8vw,11.5vh),150px);line-height:.92;text-transform:uppercase;letter-spacing:-.01em;padding-bottom:.06em}
+.hero .lead{margin:0;font-size:clamp(18px,min(1.9vw,3vh),28px);line-height:1.25;font-weight:700;max-width:30ch}
+.hero ul{margin:0;padding:0;list-style:none;line-height:1.8}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn-hot{background:var(--hot);color:var(--ink)}
+.btn-hot:hover{background:var(--ink);color:var(--paper)}
+.btn-line{background:var(--paper);color:var(--ink);border:var(--rule)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.cta .btn{min-height:50px;padding:0 22px}
+.hero-pics{border-left:var(--rule);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:0}
+.hero-pics img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:grayscale(1) contrast(1.1);display:block}
+.hero-pics img+img{border-left:var(--rule)}
+
+/* section header used by every block */
+.label{display:flex;align-items:center;gap:12px}
+.label::after{content:"";flex:1;height:3px;background:currentColor}
+
+/* stats */
+.stats{background:var(--ink);color:var(--paper);flex:0 0 auto}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat{padding-block:clamp(14px,2.4vh,28px);padding-right:20px}
+.stat + .stat{border-left:1px solid #333;padding-left:20px}
+.stat b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(34px,min(5vw,7.5vh),72px);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:6px}
+
+/* path */
+.path .wrap{padding-block:96px;display:flex;flex-wrap:wrap;gap:48px}
+.path h2{margin:16px 0 0;font-family:var(--display);font-weight:700;font-size:clamp(48px,6vw,96px);line-height:.9;text-transform:uppercase}
+.path-left{flex:1 1 360px;min-width:0}
+.path-grid{flex:1 1 520px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:var(--rule)}
+.path-grid > div{padding:28px}
+.path-grid .now{background:var(--hot);grid-column:1/-1;border-top:var(--rule)}
+.path-grid .mid{border-left:var(--rule)}
+.path-grid p{margin:12px 0 0}
+.path-grid .now p{font-size:22px;line-height:1.35;font-weight:700}
+
+/* cases: separate cards, whole screenshots on a grey tray */
+.cases{border-top:var(--rule)}
+.cases > .wrap{padding-block:96px}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+.sec-head h2{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(64px,10vw,160px);line-height:.92;text-transform:uppercase}
+.sec-head p{margin:0;max-width:360px}
+.case-list{display:flex;flex-direction:column;gap:40px}
+.case{border:var(--rule);display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);background:var(--paper)}
+.case-info{padding:32px;display:flex;flex-direction:column;gap:16px;border-right:var(--rule)}
+.case-num{display:flex;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+.case-info strong{font-family:var(--display);font-weight:700;font-size:clamp(36px,3.4vw,52px);line-height:1.05;color:var(--hot);overflow-wrap:anywhere}
+.case-info p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.tags span{border:2px solid var(--ink);padding:6px 10px;font-family:var(--mono);font-size:12px;text-transform:uppercase}
+.case-shots{background:var(--soft);padding:28px;display:flex;gap:20px;align-items:center;overflow-x:auto;min-width:0;scroll-snap-type:x proximity}
+.case-shots img{flex:0 0 auto;height:460px;width:auto;max-width:none;border:3px solid var(--ink);border-radius:14px;background:var(--paper);display:block;scroll-snap-align:start}
+.case-shots img.logo{height:240px;border-radius:50%;border:none;background:transparent}
+.swipe{display:none}
+.case.dark{background:var(--ink);color:var(--paper)}
+.case.dark .case-info{border-right-color:var(--paper)}
+.case.dark .case-num{border-bottom-color:var(--paper)}
+.case.dark .tags span{border-color:var(--paper)}
+.case.dark .case-shots{background:#1A1A1A}
+.case.dark .case-shots img{border-color:var(--paper)}
+
+/* life content */
+.life{border-top:var(--rule);background:var(--hot)}
+.life .wrap{padding-block:96px}
+.life h2{margin:16px 0 24px;font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,112px);line-height:1;text-transform:uppercase}
+.life .lead{margin:0 0 40px;max-width:720px;font-size:19px;font-weight:600}
+.reels{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:3px;border:var(--rule);background:var(--ink)}
+.reels figure{margin:0;position:relative}
+.reels img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block}
+.facts{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px 28px;font-weight:700}
+
+/* fit */
+.fit{border-top:var(--rule)}
+.fit .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.fit .wrap > div{padding-block:56px;padding-right:32px}
+.fit .wrap > div + div{border-left:var(--rule);padding-left:32px}
+.fit ul{margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--display);font-weight:500;font-size:clamp(22px,2.2vw,28px);line-height:1.2;text-transform:uppercase}
+.fit li{display:flex;gap:14px}
+.fit li::before{content:"+";color:var(--hot);font-weight:700}
+.fit .no li::before{content:"×"}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .wrap{padding-block:96px 64px}
+.contact h2{margin:0 0 48px;font-family:var(--display);font-weight:700;font-size:clamp(40px,10.5vw,170px);line-height:.92;text-transform:uppercase}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border:3px solid var(--paper)}
+.links > *{display:block;padding:28px;text-decoration:none;color:var(--paper)}
+.links > * + *{border-left:3px solid var(--paper)}
+.links .main{background:var(--hot);color:var(--ink)}
+.links a:hover{background:var(--paper);color:var(--ink)}
+.links b{display:block;margin-top:10px;font-family:var(--display);font-weight:500;font-size:clamp(26px,3vw,36px);user-select:all}
+.contact .bye{margin:40px 0 0;color:var(--mute-dark)}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  .top .wrap{display:grid;grid-template-columns:1fr auto;gap:8px 12px;padding-block:10px}
+  .top nav{grid-column:1/-1;grid-row:2;gap:8px;overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;scrollbar-width:none;justify-content:space-between;font-size:11px;letter-spacing:0}
+  .top nav a{display:inline-flex;align-items:center;min-height:36px}
+  .first{height:auto;min-height:0;max-height:none}
+  .hero,.hero-grid{display:contents}
+  .hero-copy{order:1;padding-block:24px;gap:18px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .stats{order:2}
+  .hero-pics{order:3}
+  .hero h1{font-size:clamp(52px,17vw,88px)}
+  .hero-pics{border-left:none;border-bottom:var(--rule)}
+  .hero-pics img{height:300px}
+  .cta .btn{flex:1 1 auto;justify-content:center}
+  .stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+  .stat{padding-block:16px;padding-right:12px}
+  .stat + .stat{border-left:none;padding-left:0}
+  .stat:nth-child(even){border-left:1px solid #333;padding-left:16px}
+  .stat:nth-child(n+3){border-top:1px solid #333}
+  .stat b{font-size:clamp(30px,9.5vw,44px)}
+  .stat span{font-size:11px}
+  .path .wrap,.cases > .wrap,.life .wrap{padding-block:56px}
+  .path .wrap{gap:32px}
+  .sec-head{margin-bottom:28px}
+  .case-list{gap:28px}
+  .case{grid-template-columns:1fr}
+  .case-info{padding:24px 20px;border-right:none;border-bottom:var(--rule)}
+  .case.dark .case-info{border-bottom-color:var(--paper)}
+  .swipe{display:block;margin:0;padding:12px 20px 0;background:var(--soft);font-size:11px}
+  .case.dark .swipe{background:#1A1A1A}
+  .case-shots{padding:16px 20px 20px;gap:14px}
+  .case-shots img{height:380px}
+  .case-shots img.logo{height:200px}
+  .reels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fit .wrap > div{padding-block:36px;padding-right:0}
+  .contact .wrap{padding-block:56px 40px}
+  .contact h2{margin-bottom:28px}
+  .links > *{padding:20px}
+  .fit .wrap > div + div{border-left:none;border-top:var(--rule);padding-left:0}
+  .links > * + *{border-left:none;border-top:3px solid var(--paper)}
+  .path-grid .mid{border-left:none;border-top:var(--rule)}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap mono">
+    <span class="brand">R/S reels producer</span>
+    <nav aria-label="Разделы">
+      <a href="#about">Обо мне</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#life">Лайф-контент</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="btn" href="https://t.me/rysalinio">Написать</a>
+  </div>
+</header>
+
+<main>
+<div class="first">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="mono">рилс-продюсер и&#160;контент-маркетолог</div>
+      <h1>Рустем<br><span class="hot">Садыков</span></h1>
+      <p class="lead">Не&#160;делаю «просто ролики», а&#160;через видео усиливаю образ, доверие и&#160;деньги</p>
+      <ul class="mono">
+        <li>4-й год в&#160;видео</li>
+        <li>Бизнес, личные бренды, эксперты</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-hot" href="#cases">Смотреть кейсы</a>
+        <a class="btn btn-line" href="https://t.me/rysalinio">Написать в&#160;Telegram</a>
+      </div>
+    </div>
+    <div class="hero-pics">
+      <img src="img/point.jpg" alt="Рустем указывает в камеру">
+      <img src="img/arms.jpg" alt="Рустем со скрещёнными руками">
+    </div>
+  </div>
+</section>
+
+<div class="stats" role="region" aria-label="Результаты в цифрах">
+  <div class="wrap">
+    <div class="stat"><b class="hot">13,3М</b><span class="mono">просмотров / 1 ролик</span></div>
+    <div class="stat"><b>36</b><span class="mono">машин / YouTube Shorts</span></div>
+    <div class="stat"><b>+126К ₽</b><span class="mono">прибыли / 7&#160;дней</span></div>
+    <div class="stat"><b>1,5М ₽</b><span class="mono">клиентов / эксперт</span></div>
+  </div>
+</div>
+</div>
+
+<section class="path" id="about">
+  <div class="wrap">
+    <div class="path-left">
+      <div class="mono label">01 обо мне</div>
+      <h2>13&#160;лет с&#160;телом,<br><span class="hot">теперь с&#160;видео</span></h2>
+    </div>
+    <div class="path-grid">
+      <div><div class="mono" style="font-weight:700">Тогда</div><p>Тренер, реабилитолог и&#160;массажист<br>Научился чувствовать людей, брать ответственность и&#160;доводить до&#160;результата</p></div>
+      <div class="mid"><div class="mono" style="font-weight:700">Переход</div><p>Понял, что&#160;видео стало моим языком<br>Изучил маркетинг, SMM, YouTube и&#160;короткие форматы<br>Шаг за&#160;шагом пришёл к&#160;продюсерскому подходу</p></div>
+      <div class="now"><div class="mono" style="font-weight:700">Сейчас</div><p>Видео- и&#160;рилс-продюсер<br>Соединяю креатив, стратегию и&#160;психологию восприятия</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Кейсы</h2>
+      <p class="mono">02 хайп в&#160;пользу бренда и&#160;денег, а&#160;не&#160;ради пустых просмотров</p>
+    </div>
+
+    <div class="case-list">
+    <article class="case">
+      <div class="case-info">
+        <div class="case-num mono"><span>Кейс 01</span><span>полуфабрикаты</span></div>
+        <strong>+126&#160;000&#160;₽</strong>
+        <p>к&#160;прибыли за&#160;7&#160;дней через Reels для&#160;«Как у&#160;Дэу Эни», доставки замороженной халяль-еды в&#160;Казани<br>В&#160;Telegram-сообществе бренда 2&#160;570 участников</p>
+        <div class="tags"><span>Reels</span><span>Telegram</span></div>
+      </div>
+      <p class="swipe mono" aria-hidden="true">листайте скрины вправо</p>
+      <div class="case-shots">
+        <img class="logo" src="img/s1-logo.jpg" alt="Логотип «Как у Дэу Эни»" loading="lazy">
+        <img src="img/s1-tg.jpg" alt="Telegram-сообщество «Как у Дэу Эни»" loading="lazy">
+      </div>
+    </article>
+    <article class="case">
+      <div class="case-info">
+        <div class="case-num mono"><span>Кейс 02</span><span>авто из Китая</span></div>
+        <strong>36&#160;машин</strong>
+        <p>продано через YouTube Shorts вместе с&#160;командой автосалона IMPOCARS DV<br>У&#160;канала 12,9&#160;тыс. подписчиков на&#160;YouTube и&#160;8&#160;181 в&#160;Instagram</p>
+        <div class="tags"><span>YouTube Shorts</span><span>Instagram</span></div>
+      </div>
+      <p class="swipe mono" aria-hidden="true">листайте скрины вправо</p>
+      <div class="case-shots">
+        <img src="img/s2-yt.jpg" alt="YouTube-канал IMPOCARS DV" loading="lazy">
+        <img src="img/s2-ig.jpg" alt="Instagram-профиль impocars_dv" loading="lazy">
+      </div>
+    </article>
+    <article class="case">
+      <div class="case-info">
+        <div class="case-num mono"><span>Кейс 03</span><span>эксперты и блогеры</span></div>
+        <strong>до&#160;1,5&#160;млн&#160;₽</strong>
+        <p>привлечение клиентов для&#160;основательницы бренда медодежды и&#160;спецодежды<br>Один из&#160;роликов набрал 756&#160;тыс. просмотров</p>
+        <div class="tags"><span>Reels</span><span>Личный бренд</span></div>
+      </div>
+      <p class="swipe mono" aria-hidden="true">листайте скрины вправо</p>
+      <div class="case-shots">
+        <img src="img/s3-reel.jpg" alt="Ролик на 756 тыс. просмотров" loading="lazy">
+        <img src="img/s3-ig.jpg" alt="Instagram-профиль valeriya.stepchenko" loading="lazy">
+        <img src="img/s3-reels.jpg" alt="Вкладка роликов valeriya.stepchenko" loading="lazy">
+      </div>
+    </article>
+    <article class="case">
+      <div class="case-info">
+        <div class="case-num mono"><span>Кейс 04</span><span>эксперты и блогеры</span></div>
+        <strong>Имиджевая страница</strong>
+        <p>развитие личного блога гида по&#160;фудмоллу «Депо» на&#160;Лесной: живые ролики о&#160;местах и&#160;проектах</p>
+        <div class="tags"><span>Reels</span><span>Имидж</span></div>
+      </div>
+      <p class="swipe mono" aria-hidden="true">листайте скрины вправо</p>
+      <div class="case-shots">
+        <img src="img/s4-ig.jpg" alt="Instagram-профиль olga_klzd" loading="lazy">
+        <img src="img/s4-reels.jpg" alt="Вкладка роликов olga_klzd" loading="lazy">
+      </div>
+    </article>
+    <article class="case dark">
+      <div class="case-info">
+        <div class="case-num mono"><span>Кейс 05</span><span>вирусный ролик</span></div>
+        <strong>13,3&#160;млн</strong>
+        <p>просмотров у&#160;одного ролика в&#160;блоге пилота Boeing 737-800 и&#160;актёра с&#160;аудиторией 137&#160;тыс. подписчиков</p>
+        <div class="tags"><span>Reels</span><span>Охват</span></div>
+      </div>
+      <p class="swipe mono" aria-hidden="true">листайте скрины вправо</p>
+      <div class="case-shots">
+        <img src="img/s5-reel.jpg" alt="Ролик на 13,3 млн просмотров" loading="lazy">
+        <img src="img/s5-ig.jpg" alt="Instagram-профиль vippilot_official" loading="lazy">
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section class="life" id="life">
+  <div class="wrap">
+    <div class="mono label">03 лайф-контент, beauty-тесты и&#160;честные обзоры</div>
+    <h2>Не&#160;продаю продукт,<br>а&#160;показываю жизнь</h2>
+    <p class="lead">Тест, опыт и&#160;честный вывод<br>Зритель узнаёт себя в&#160;истории, доверяет ей и&#160;сам решает попробовать продукт<br>За&#160;плечами 6&#160;месяцев нативных интеграций косметики VOIS</p>
+    <div class="reels">
+      <figure><img src="img/r-pvz.jpg" alt="Ролик «Когда отказали в возврате на ПВЗ», 203&#160;тыс. просмотров" loading="lazy"></figure>
+      <figure><img src="img/r-spf.jpg" alt="Ролик про SPF-стик, 179&#160;тыс. просмотров" loading="lazy"></figure>
+      <figure><img src="img/r-summer.jpg" alt="Ролик «Буду спасаться им летом 2026», 138&#160;тыс. просмотров" loading="lazy"></figure>
+      <figure><img src="img/r-stick.jpg" alt="Ролик «Поможет замедлить старение кожи», 42,7&#160;тыс. просмотров" loading="lazy"></figure>
+      <figure><img src="img/r-face.jpg" alt="Ролик «Сколько стоит обслуживать своё лицо», 34,8&#160;тыс. просмотров" loading="lazy"></figure>
+      <figure><img src="img/r-daughter.jpg" alt="Ролик «Дочь в 13&#160;лет шарит за эту тему», 23,3&#160;тыс. просмотров" loading="lazy"></figure>
+    </div>
+    <div class="facts mono">
+      <span>88,6% мужчины</span><span>48,8% в&#160;возрасте 25–34&#160;лет</span><span>77,9% из&#160;России</span><span>живо, быстро, честно</span>
+    </div>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <div>
+      <div class="mono label">04 с&#160;кем работаю</div>
+      <ul>
+        <li>Собственники бизнеса, которые уже в&#160;деньгах</li>
+        <li>Ценят вкус и&#160;понимают силу визуала</li>
+        <li>Хотят системный результат</li>
+        <li>Проекты «по&#160;любви»</li>
+      </ul>
+    </div>
+    <div>
+      <div class="mono label">кому не&#160;подхожу</div>
+      <ul class="no">
+        <li>Хаотичные запросы</li>
+        <li>Ожидание мгновенного чуда</li>
+        <li>Неуважение к&#160;процессу</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="mono label" style="margin-bottom:24px">05 контакты</div>
+    <h2>Давайте <span class="hot">знакомиться</span></h2>
+    <div class="links">
+      <a class="main" href="https://t.me/rysalinio"><span class="mono">telegram</span><b>@rysalinio</b></a>
+      <a href="https://instagram.com/rusttem"><span class="mono">instagram</span><b>rusttem</b></a>
+      <div><span class="mono">телефон</span><b>+7 906 779-99-45</b></div>
+    </div>
+    <p class="bye mono">Иногда одно видео меняет восприятие бренда, а&#160;иногда это&#160;целый путь</p>
+  </div>
+</section>
+</main>
+
+</body>
+</html>
